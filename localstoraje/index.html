@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="id" />
+    <input type="text" id="productName" />
+    <input type="text" id="price" />
+    <button onclick="submit()">Submit</button>
+
+    <script>
+
+        let products = [
+            {
+                id: 1,
+                productName: "watch",
+                price: 19,
+            },
+        ];
+
+
+
+        function submit() {
+            let id = document.getElementById("id").value;
+            let productName = document.getElementById("productName").value;
+            let price = document.getElementById("price").value;
+
+            let product = {
+                id,
+                productName,
+                price,
+            };
+
+
+            products.push(product);
+
+            console.log(products);
+            localStorage.setItem("data",JSON.stringify(products));
+        let result = JSON.parse(localStorage.getItem("data"));
+
+        console.log(result);
+        }
+
+
+    </script>
+</body>
+
+</html>
