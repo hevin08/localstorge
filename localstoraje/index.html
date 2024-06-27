@@ -12,15 +12,219 @@
     <input type="text" id="id" />
     <input type="text" id="productName" />
     <input type="text" id="price" />
+    <input type="text" id="category" />
+    <input type="text" id="date" />
+    <input type="text" id="compny" />
     <button onclick="submit()">Submit</button>
 
     <script>
 
         let products = [
             {
-                id: 1,
-                productName: "watch",
-                price: 19,
+                num: 1,
+                name: "AC",
+                price: "45490",
+                category: "electronics",
+                date: 25,
+                compny: "dakin",
+            },
+
+            {
+                num: 2,
+                name: "Refrigerator",
+                price: "79990",
+                category: "electronics",
+                date: 27,
+                compny: "samsung",
+            },
+
+            {
+                num: 3,
+                name: "Oven",
+                price: "17990",
+                category: "electronics",
+                date: 1,
+                compny: "lg",
+            },
+
+            {
+                num: 4,
+                name: "Helmet",
+                price: "1999",
+                category: "vehicle",
+                date: 10,
+                compny: "steelbird",
+            },
+
+            {
+                num: 5,
+                name: "Helmet",
+                price: "1999",
+                category: "vehicle",
+                date: 10,
+                compny: "steelbird",
+            },
+
+            {
+                num: 6,
+                name: "Pressure Cooker",
+                price: "81879",
+                category: "kitchen",
+                date: 13,
+                compny: "usha",
+            },
+
+            {
+                num: 7,
+                name: "Dinner Set",
+                price: "118845",
+                category: "kitchen",
+                date: 29,
+                compny: "steelbird  ",
+            },
+            {
+                num: 8,
+                name: "Tea Mug",
+                price: "32476",
+                category: "kitchen",
+                date: 20,
+                compny: "usha",
+            },
+            {
+                num: 9,
+                name: "TV",
+                price: "200000",
+                category: "electronics",
+                date: 27,
+                compny: "samsung",
+            },
+            {
+                num: 10,
+                name: "Slipper",
+                price: "100",
+                category: "footwear",
+                date: 30,
+                compny: "nike",
+            },
+            {
+                num: 11,
+                name: "Jeans",
+                price: "1950",
+                category: "cloth",
+                date: 31,
+                compny: "lives",
+            },
+            {
+                num: 12,
+                name: "bag",
+                price: "999",
+                category: "cloth",
+                date: 5,
+                compny: "safari",
+            },
+            {
+                num: 13,
+                name: "charger",
+                price: "2500",
+                category: "electronics",
+                date: 7,
+                compny: "samsung",
+            },
+            {
+                num: 14,
+                name: "laptop",
+                price: "37999",
+                category: "electronics",
+                date: 9,
+                compny: "hp",
+            },
+            {
+                num: 15,
+                name: "smart watch",
+                price: "650",
+                category: "electronics",
+                date: 10,
+                compny: "samsung",
+            },
+            {
+                num: 16,
+                name: "fan",
+                price: "3999",
+                category: "electronics",
+                date: 12,
+                compny: "usha",
+            },
+            {
+                num: 17,
+                name: "pillow",
+                price: "1600",
+                category: "cloth",
+                date: 17,
+                compny: "steelbird",
+            },
+            {
+                num: 18,
+                name: "ring",
+                price: "120",
+                category: "electronics",
+                date: 15,
+                compny: "apple",
+            },
+            {
+                num: 19,
+                name: "i phone 15 pro max",
+                price: "159999",
+                category: "mobile",
+                date: 19,
+                compny: "apple",
+            },
+            {
+                num: 20,
+                name: "headphone",
+                price: "19000",
+                category: "electronics",
+                date: 21,
+                compny: "apple",
+            },
+            {
+                num: 21,
+                name: "pixel 8 pro",
+                price: "89000",
+                category: "mobile",
+                date: 27,
+                compny: "google",
+            },
+            {
+                num: 22,
+                name: "soundbar",
+                price: "12000",
+                category: "electronics",
+                date: 26,
+                compny: "google",
+            },
+            {
+                num: 23,
+                name: "wallet",
+                price: "1899",
+                category: "cloth",
+                date: 14,
+                compny: "safari",
+            },
+            {
+                num: 24,
+                name: "honda city",
+                price: "1599999",
+                category: "vehicle",
+                date: 27,
+                compny: "honda",
+            },
+            {
+                num: 25,
+                name: "shine",
+                price: "90000",
+                category: "vehicle",
+                date: 7,
+                compny: "honda",
             },
         ];
 
@@ -30,21 +234,27 @@
             let id = document.getElementById("id").value;
             let productName = document.getElementById("productName").value;
             let price = document.getElementById("price").value;
+            let category = document.getElementById("category").value;
+            let date = document.getElementById("date").value;
+            let compny = document.getElementById("compny").value;
+            
 
             let product = {
                 id,
                 productName,
                 price,
+                category,
+                date,
+                compny,
             };
 
 
             products.push(product);
 
-            console.log(products);
-            localStorage.setItem("data",JSON.stringify(products));
-        let result = JSON.parse(localStorage.getItem("data"));
+            localStorage.setItem("data", JSON.stringify(products));
+            let result = JSON.parse(localStorage.getItem("data"));
 
-        console.log(result);
+            console.log(result);
         }
 
 
